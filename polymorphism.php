@@ -5,9 +5,9 @@ class Foo
         echo  'this is foo';
     }
 
-    // public function getName(){
-    //   echo "foo";
-    // }
+    public function getName(){
+      echo "foo";
+    }
 }
 
 class Bar
@@ -16,9 +16,9 @@ class Bar
     echo 'this is bar';
   }
 
-  public function getName(){
-    echo "bar \n";
-  }
+  // public function getName(){
+  //   echo "bar \n";
+  // }
 }
 
 class Baz
@@ -48,13 +48,18 @@ while($exit == false){
   if (PHP_OS == 'WINNT') {
     $choice = stream_get_line(STDIN, 1024, PHP_EOL);
   } else {
-    $choice = readline('$ ');
+    $choice = readline('');
   }
 
   if ($choice == 1) { // Bar
-    $foo = & $bar; // dynamic binding and referenced by a reference
+    // For dynamic binding and referenced by a reference
+    // Note: becuase following line will cause error, so
+    // we can see PHP doesn't do dynamic bind.
+    $foo = & $bar;
+
   }else if ($choice == 2) {// Baz
     $foo = & $baz;
+
   }else{
     $exit = 1;
   }
