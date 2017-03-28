@@ -10,7 +10,7 @@ class Foo
     }
 }
 
-class Bar
+class Bar extends Foo
 {
   public function dispaly() {
     echo 'this is bar';
@@ -21,15 +21,15 @@ class Bar
   // }
 }
 
-class Baz
+class Baz extends Foo
 {
   public function dispaly() {
     echo 'this is bar';
   }
 
-  public function getName(){
-    echo "baz \n";
-  }
+  // public function getName(){
+  //   echo "baz \n";
+  // }
 }
 
 
@@ -53,8 +53,6 @@ while($exit == false){
 
   if ($choice == 1) { // Bar
     // For dynamic binding and referenced by a reference
-    // Note: becuase following line will cause error, so
-    // we can see PHP doesn't do dynamic bind.
     $foo = & $bar;
 
   }else if ($choice == 2) {// Baz
