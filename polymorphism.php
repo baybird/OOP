@@ -1,39 +1,47 @@
 <?php
 class Foo
 {
+    private $name;
+
     public function dispaly() {
         echo  'this is foo';
     }
 
+    public function setName($name){
+      $this->name = $name;
+    }
+
     public function getName(){
-      echo "foo";
+      return $this->name;
     }
 }
 
 class Bar extends Foo
 {
-  public function dispaly() {
-    echo 'this is bar';
+  public function __construct(){
+    $this->setName("Bar");
   }
 
-  // public function getName(){
-  //   echo "bar \n";
-  // }
+  public function dispaly() {
+    echo 'this is '. $this->getName();
+  }
+
 }
 
 class Baz extends Foo
 {
-  public function dispaly() {
-    echo 'this is bar';
+  public function __construct(){
+    $this->setName("Baz");
   }
 
-  // public function getName(){
-  //   echo "baz \n";
-  // }
+  public function dispaly() {
+    echo 'this is '. $this->getName();
+  }
 }
 
-
+// Test
 $foo = new Foo();
+
 $bar = new Bar();
 $baz = new Baz();
 
@@ -54,10 +62,8 @@ while($exit == false){
   if ($choice == 1) { // Bar
     // For dynamic binding and referenced by a reference
     $foo = & $bar;
-
   }else if ($choice == 2) {// Baz
     $foo = & $baz;
-
   }else{
     $exit = 1;
   }
