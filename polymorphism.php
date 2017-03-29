@@ -61,7 +61,7 @@ while($exit == false){
 
   if ($choice == 1) { // Bar
     // For dynamic binding and referenced by a reference
-    $foo = & $bar;
+    $foo = & $bar; // without referenced as reference works as well since there is no pointer in PHP
   }else if ($choice == 2) {// Baz
     $foo = & $baz;
   }else{
