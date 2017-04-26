@@ -1,4 +1,5 @@
 <?php
+// PHP doesn't support overload as in C++
 class Area
 {
     public function calArea($radious, $width = null){
@@ -7,9 +8,7 @@ class Area
         }else if($radious!= null && $width != null){
             return $this->calArea4Rectangle($radious, $width);
         }
-    }
-
-    // PHP cannot do this as in C++
+    }    
     // public function calArea($radious){
     //     return $this->calArea4Circle($radious);
     // }
