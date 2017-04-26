@@ -1,5 +1,5 @@
 <?php
-// PHP doesn't support overload as in C++
+// PHP doesn't support overloading
 class Area
 {
     public function calArea($radious, $width = null){
