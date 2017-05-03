@@ -2,7 +2,8 @@
 # Filename      : traits.php
 # Author        : Robert Tang
 # Created       : 5/3/2017
-# Description   : PHP Traits are a mechanism for code reuse in single inheritance languages such as PHP.
+# Description   : PHP is single inheritance language, since 5.4 version it
+#                 provides a mechanism Traits for code reuse as multi inheritance.
 # PHP Version   : 5.4 and above
 
 trait Cpu {
