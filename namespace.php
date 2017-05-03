@@ -4,14 +4,12 @@
 // Created       : 5/3/2017
 // Description   : A namespace is a mechanism that allows a group of related names to be defined
 //                 in one place.
-// Problem       : Global variables present many problems in large software systems because they
+//                 Global variables present many problems in large software systems because they
 //                 can be accessed, modified anywhere in the program and can lead to programming errors,
 //                 since an important global variable may be hidden by a local variable of the same name.
 //                 As a result, it is best to avoid global variables. We may not be able to avoid globals
-//                 entirely, however.
-//                 Namespace helps organize global objects into natural groups and minimizes
-//                 the problems of globals.
-
+//                 entirely, however. Namespace helps organize global objects into natural groups and
+//                 minimizes the problems of globals.
 namespace projects\p1;
 class classname
 {
