@@ -66,8 +66,10 @@ $d->run();
 // eatting
 // walking
 // smiling
+// playing
 
 // a boy is:
 // eatting
 // walking
 // smiling
+// playing
