@@ -1,4 +1,5 @@
 <?php
+// Late Static Bindings
 class Foo {
     public static function who() {
         echo __CLASS__;
@@ -9,18 +10,14 @@ class Foo {
     }
 }
 
-class Bar {
+class Bar extends Foo{
     public static function who() {
-        echo "Bar";
+        echo __CLASS__;
     }
 
     public static function test() {
         self::who();
     }
 }
-
-$obj = new Foo;
-$obj->who();
-echo "\n";
 
 Bar::test();
