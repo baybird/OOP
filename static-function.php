@@ -21,3 +21,5 @@ class Bar extends Foo{
 }
 
 Bar::test();
+// output
+// Bar
