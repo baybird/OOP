@@ -17,11 +17,19 @@ trait Smile{
     }
 }
 
-abstract class Human {
+interface Play{
+    public function play();
+}
+
+abstract class Human implements Play {
     abstract public function eat();
 
     public function walk(){
         echo "walking \n";
+    }
+
+    public function play(){
+        echo "playing \n";
     }
 
     use Smile;
@@ -42,6 +50,7 @@ class Demo {
         $aBoy->eat();
         $aBoy->walk();
         $aBoy->smile();
+        $aBoy->play();
         echo "\n";
     }
 }
