@@ -5,7 +5,10 @@
 // Description   : A namespace is a mechanism that allows a group of related names to be defined
 //                 in one place. Namespace helps organize global objects into natural groups and
 //                 minimizes the problems of globals.
+//                 * In the broadest definition namespaces are a way of encapsulating items.
+
 namespace projects\p1;
+
 class classname
 {
     function __construct()
@@ -42,16 +45,18 @@ const constname = "2";
 $a = '\projects\p1\classname';
 $obj = new $a;
 
-$a = 'projects\p1\classname';
+$a = 'projects\p2\classname';
 $obj = new $a;
 
 
 $b = 'projects\p1\funcname';
 $b();
-$b = '\projects\p1\funcname';
+$b = '\projects\p2\funcname';
 $b();
 
 
 echo constant('\projects\p1\constname'), "\n";
-echo constant('projects\p1\constname'), "\n";
+echo constant('projects\p2\constname'), "\n";
+
 echo \projects\p1\constname, "\n";
+echo \projects\p2\constname, "\n";
